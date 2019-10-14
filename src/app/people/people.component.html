@@ -1,1 +1,16 @@
-<li>{{ name }}</li>
+<table class="table table-sm table-success ">
+    <thead>
+        <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let people of peoples">
+        <td>{{ people.name }}</td>
+        <td>{{ people.gender }}</td>
+        <td>{{ people.gender }}</td>
+        </tr>
+    </tbody>
+</table>

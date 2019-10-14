@@ -1,17 +1,11 @@
-<div *ngFor="let post of posts">
-        <h3>{{ post.name }}</h3>
-    </div>
 <div class="container" align="center">
     <div class="row">
         <div class="col-md-12">
         <hr>
         <img src="assets/img/perfil.png" class="img-fluid" alt="Responsive image">
         </div>
-        <hr>
     </div>
-    <div id="canvas">
-        <app-canvas></app-canvas>
-    </div>
+    <router-outlet></router-outlet>
 </div>
 
 

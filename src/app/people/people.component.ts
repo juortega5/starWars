@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-people',
@@ -6,8 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent implements OnInit {
-  @Input() name;
-  constructor() { }
+  
+  peoples: any[] = [];
+  
+   constructor(private dataService: DataService){
+    this.dataService.getData('https://swapi.co/api/people/').subscribe(data => {
+      this.peoples = data['results'];
+    });
+   }
 
   ngOnInit() {
   }

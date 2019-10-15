@@ -1,0 +1,33 @@
+<table class="table table-sm table-dark" style="text-align:center;">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Diameter</th>
+                <th scope="col">Gravity</th>
+                <th scope="col">Climate</th>
+                <th scope="col">Terrain</th>
+                <th scope="col">Rotation period</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let planet of planets">
+                <td>{{ planet.name }}</td>
+                <td>{{ planet.diameter }}</td>
+                <td>{{ planet.gravity }}</td>
+                <td>{{ planet.climate }}</td>
+                <td>{{ planet.terrain }}</td>
+                <td>{{ planet.rotation_period }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/planets/?page=1')">1</button></li>
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/planets/?page=2')">2</button></li>
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/planets/?page=3')">3</button></li>
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/planets/?page=4')">4</button></li>
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/planets/?page=5')">5</button></li>
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/planets/?page=6')">6</button></li>
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/planets/?page=7')">7</button></li>
+        </ul>
+    </nav>

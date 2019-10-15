@@ -1,0 +1,30 @@
+<table class="table table-sm table-dark" style="text-align:center;">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Language</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Classification</th>
+                <th scope="col">Eye color</th>
+                <th scope="col">Hair color</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let specie of species">
+                <td>{{ specie.name }}</td>
+                <td>{{ specie.language }}</td>
+                <td>{{ specie.designation }}</td>
+                <td>{{ specie.classification }}</td>
+                <td>{{ specie.eye_colors }}</td>
+                <td>{{ specie.hair_colors }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/species/?page=1')">1</button></li>
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/species/?page=2')">2</button></li>
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/species/?page=3')">3</button></li>
+            <li class="page-item"><button class="page-link" (click)="getPage('https://swapi.co/api/species/?page=4')">4</button></li>
+        </ul>
+    </nav>

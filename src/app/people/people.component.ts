@@ -1,17 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../data.service';
 
+
 @Component({
   selector: 'app-people',
   templateUrl: './people.component.html',
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent implements OnInit {
-  
   peoples: any[] = [];
   
    constructor(private dataService: DataService){
-    this.dataService.getData('https://swapi.co/api/people/').subscribe(data => {
+      this.dataService.getData('https://swapi.co/api/people/').subscribe(data => {
       this.peoples = data['results'];
     });
    }
@@ -19,4 +19,11 @@ export class PeopleComponent implements OnInit {
   ngOnInit() {
   }
 
+  getPage(ruta='https://swapi.co/api/people/')  {
+    this.dataService.getData(ruta).subscribe(data => {
+      this.peoples = data['results'];
+      console.log(this.peoples);
+  });}
+
+  
 }

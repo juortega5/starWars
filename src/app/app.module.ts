@@ -8,17 +8,23 @@ import { CanvasComponent } from './canvas/canvas.component';
 import { PeopleComponent } from './people/people.component';
 
 import { DataService } from './data.service';
+import { PlanetsComponent } from './planets/planets.component';
+import { SpeciesComponent } from './species/species.component';
 
 const routes: Route[] = [
   {path:'',component: CanvasComponent},
-  {path:'people',component: PeopleComponent}
+  {path:'people',component: PeopleComponent},
+  {path:'planets',component: PlanetsComponent},
+  {path:'species',component: SpeciesComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     CanvasComponent,
-    PeopleComponent
+    PeopleComponent,
+    PlanetsComponent,
+    SpeciesComponent
   ],
   imports: [
     BrowserModule,

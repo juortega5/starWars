@@ -1,0 +1,20 @@
+<table class="table table-sm table-dark" style="text-align:center;">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Director</th>
+                <th scope="col">Episode</th>
+                <th scope="col">Producer</th>
+                <th scope="col">Release date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let film of films">
+                <td>{{ film.title }}</td>
+                <td>{{ film.director }}</td>
+                <td>{{ film.episode_id }}</td>
+                <td>{{ film.producer }}</td>
+                <td>{{ film.release_date }}</td>
+            </tr>
+        </tbody>
+    </table>

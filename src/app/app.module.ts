@@ -10,12 +10,18 @@ import { PeopleComponent } from './people/people.component';
 import { DataService } from './data.service';
 import { PlanetsComponent } from './planets/planets.component';
 import { SpeciesComponent } from './species/species.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { StarshipsComponent } from './starships/starships.component';
+import { FilmsComponent } from './films/films.component';
 
 const routes: Route[] = [
   {path:'',component: CanvasComponent},
   {path:'people',component: PeopleComponent},
   {path:'planets',component: PlanetsComponent},
-  {path:'species',component: SpeciesComponent}
+  {path:'species',component: SpeciesComponent},
+  {path:'vehicles',component: VehiclesComponent},
+  {path:'starships',component: StarshipsComponent},
+  {path:'films',component: FilmsComponent}
 ];
 
 @NgModule({
@@ -24,7 +30,10 @@ const routes: Route[] = [
     CanvasComponent,
     PeopleComponent,
     PlanetsComponent,
-    SpeciesComponent
+    SpeciesComponent,
+    VehiclesComponent,
+    StarshipsComponent,
+    FilmsComponent
   ],
   imports: [
     BrowserModule,
